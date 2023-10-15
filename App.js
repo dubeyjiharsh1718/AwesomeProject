@@ -4,8 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Todo from './Todo';
 import ApiCall from './ApiCall';
+import Navigatetab from './Navigatetab';
+import News from './News';
+import Newsh from './Newscategory/Newsh';
+import Sport from './Newscategory/Sport';
+import Technolgy from './Newscategory/Technolgy';
+import RegistrationForm from './RegistrationForm';
+import CounterApp from './CounterApp';
+import Themeas from './Themeas'; 
+import Latitude from './Latitude';
 
- 
 const Stack = createNativeStackNavigator();
 
 const App = () =>{
@@ -17,10 +25,19 @@ const App = () =>{
 <Stack.Screen name='Home' component={Home} />
 <Stack.Screen name='Todo' component={Todo} />
 <Stack.Screen name='ApiCall' component={ApiCall} />
-
+<Stack.Screen name='Navigatetab' component={Navigatetab} />
+<Stack.Screen name='News' component={News} />
+<Stack.Screen name='Newsh' component={Newsh} />
+<Stack.Screen name='Sport' component={Sport} />
+<Stack.Screen name='Technolgy' component={Technolgy} />
+<Stack.Screen name='RegistrationForm' component={RegistrationForm} />
+<Stack.Screen name='CounterApp' component={CounterApp} />
+<Stack.Screen name='Themeas' component={Themeas} />
+<Stack.Screen name='Latitude' component={Latitude} />
   </Stack.Navigator>
 
 </NavigationContainer>
+
   )
 };
 
@@ -31,7 +48,12 @@ const Home = (props) => {
       <Text>Home Page</Text>
       <Button title='Go to Todo list Page' onPress={()=> props.navigation.navigate('Todo')} />
       <Button title='Go to ApiCll Page' onPress={()=> props.navigation.navigate('ApiCall')} />
-
+      <Button title='Go to Navigatetab Page' onPress={()=> props.navigation.navigate('Navigatetab')} />
+      <Button title='Go to News Page' onPress={()=> props.navigation.navigate('News')} />
+      <Button title='Go to Registration Page' onPress={()=> props.navigation.navigate('RegistrationForm')} />
+      <Button title='Go to CounterApp Page' onPress={()=> props.navigation.navigate('CounterApp')} />
+      <Button title='Go to Themejs Page' onPress={()=> props.navigation.navigate('Themeas')} />
+      <Button title='Go to Latitude Page' onPress={()=> props.navigation.navigate('Latitude')} />
       <Image
         style={styles.tinyLogo}
         source={{
