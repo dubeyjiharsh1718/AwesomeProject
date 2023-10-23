@@ -13,6 +13,17 @@ import RegistrationForm from './RegistrationForm';
 import CounterApp from './CounterApp';
 import Themeas from './Themeas'; 
 import Latitude from './Latitude';
+import Camera from './Camera';
+import EntryDetailsScreen from './EntryDetailsScreen';
+import EntryListScreen from './EntryListScreen';
+// import Animated from 'react-native-reanimated';
+import AnimatedComponent from './Animated';
+// import Camera from './Camera ';
+import LoginScreen from './src/screens/LoginScreen';
+import RegistrationScreen from './src/screens/RegistrationScreen';
+import HomeScreen from './HomeScreen';
+import PropertyListScreen from './PropertyListScreen';
+import PropertyDetailsScreen from './PropertyDetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +32,13 @@ const App = () =>{
 
   return (
 <NavigationContainer>
-  <Stack.Navigator>
+<Stack.Navigator initialRouteName="Registration">
+<Stack.Screen name="Login" component={LoginScreen} />
+<Stack.Screen name="Registration" component={RegistrationScreen} />
+<Stack.Screen name="PropertyList" component={PropertyListScreen} />
+<Stack.Screen name="PropertyDetails" component={PropertyDetailsScreen} />
+<Stack.Screen name="HomeScreen" component={HomeScreen} />
+     
 <Stack.Screen name='Home' component={Home} />
 <Stack.Screen name='Todo' component={Todo} />
 <Stack.Screen name='ApiCall' component={ApiCall} />
@@ -34,6 +51,12 @@ const App = () =>{
 <Stack.Screen name='CounterApp' component={CounterApp} />
 <Stack.Screen name='Themeas' component={Themeas} />
 <Stack.Screen name='Latitude' component={Latitude} />
+<Stack.Screen name='Camera' component={Camera} />
+
+<Stack.Screen name='EntryDetailsScreen' component={EntryDetailsScreen} />
+<Stack.Screen name='EntryListScreen' component={EntryListScreen} />
+<Stack.Screen name='AnimatedComponent' component={AnimatedComponent} />
+{/* <Stack.Screen name='Camera' component={Camera} /> */}
   </Stack.Navigator>
 
 </NavigationContainer>
@@ -54,6 +77,11 @@ const Home = (props) => {
       <Button title='Go to CounterApp Page' onPress={()=> props.navigation.navigate('CounterApp')} />
       <Button title='Go to Themejs Page' onPress={()=> props.navigation.navigate('Themeas')} />
       <Button title='Go to Latitude Page' onPress={()=> props.navigation.navigate('Latitude')} />
+      <Button title='Go to EntryDetailsScreen Page' onPress={()=> props.navigation.navigate('EntryDetailsScreen')} />
+      <Button title='Go to EntryListScreen Page' onPress={()=> props.navigation.navigate('EntryListScreen')} />
+      <Button title='Go to AnimatedComponent Page' onPress={()=> props.navigation.navigate('AnimatedComponent')} />
+      <Button title='Go to AnimatedComponent Page' onPress={()=> props.navigation.navigate('AnimatedComponent')} />
+      <Button title='Go to HomeScreen' onPress={()=> props.navigation.navigate('HomeScreen')} />
       <Image
         style={styles.tinyLogo}
         source={{
