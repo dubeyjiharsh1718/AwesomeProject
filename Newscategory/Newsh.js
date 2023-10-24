@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import Sport from "./Sport"; // Import the Sport component
-import Technolgy from "./Technolgy"; // Import the Technology component
+import Sport from "./Sport"; 
+import Technolgy from "./Technolgy";
 
 const Newsh = () => {
   return (

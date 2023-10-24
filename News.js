@@ -19,7 +19,6 @@ const Tab = createBottomTabNavigator();
 const News = () => {
   return (
     
-    // <NavigationContainer>
       <Tab.Navigator 
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
